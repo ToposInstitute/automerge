@@ -371,10 +371,10 @@ impl OpSet {
         let typ = self.object_type(obj).unwrap_or(ObjType::Map);
         if typ == ObjType::Text {
             if clock.is_none() {
-                // TODO - this could be done faster with the index
-                let text = self.cols.index.text.iter_range(range.clone());
-                let iter = SkipIter::new(text.clone(), vis.clone());
-                iter.filter_map(|n| n.as_deref().copied()).sum::<u64>() as usize
+                // Fast path: use accumulated sum from the text index column
+                // The text index already stores Some(width) for visible ops and None for invisible ops
+                let (delta, _) = self.cols.index.text.get_acc_delta(range.start, range.end);
+                delta.as_usize()
             } else {
                 self.action_value_iter(range.clone(), clock.as_ref())
                     .map(|(action, value, _)| match (action, &value) {
