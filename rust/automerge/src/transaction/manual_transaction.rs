@@ -168,6 +168,29 @@ impl Transaction<'_> {
             .map(|(key, id)| (key, self.doc.id_to_exid(id)))
             .collect())
     }
+
+    /// Populate a fresh (empty) map object with an entire tree of values
+    /// in a single operation.
+    ///
+    /// This is dramatically faster than individual put/insert/splice_text calls
+    /// because all operations are collected and inserted into the columnar
+    /// storage in a single splice. For a workload inserting ~11K ops, this can
+    /// be 10x+ faster than individual operations.
+    ///
+    /// # Panics
+    ///
+    /// Panics if the target object is not empty.
+    pub fn populate_map<O: AsRef<ExId>>(
+        &mut self,
+        obj: O,
+        entries: Vec<(String, super::PopulateValue)>,
+    ) -> Result<(), AutomergeError> {
+        let obj_meta = self.doc.exid_to_obj(obj.as_ref())?;
+        if obj_meta.typ != ObjType::Map {
+            return Err(AutomergeError::InvalidOp(obj_meta.typ));
+        }
+        self.do_tx(|tx, doc, patch_log| tx.populate_map(doc, patch_log, &obj_meta, entries))
+    }
 }
 
 impl ReadDoc for Transaction<'_> {

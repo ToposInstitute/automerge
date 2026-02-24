@@ -6,6 +6,7 @@ mod transactable;
 
 pub use self::commit::CommitOptions;
 pub use self::transactable::{BlockOrText, Transactable};
+pub use inner::PopulateValue;
 pub(crate) use inner::{TransactionArgs, TransactionInner};
 pub use manual_transaction::Transaction;
 pub use result::Failure;

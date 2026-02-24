@@ -12,10 +12,20 @@ use crate::marks::{ExpandMark, Mark, MarkSet};
 use crate::op_set2::change::build_change;
 use crate::op_set2::{Op, OpSet, OpSetCheckpoint, PropRef, SuccInsert, TxOp};
 use crate::patches::PatchLog;
-use crate::types::{Clock, ElemId, ObjMeta, OpId, ScalarValue, SequenceType, TextEncoding};
+use crate::types::{Clock, ElemId, ObjId, ObjMeta, OpId, ScalarValue, SequenceType, TextEncoding};
 use crate::Automerge;
 use crate::{AutomergeError, ObjType, OpType, ReadDoc};
 use crate::{Change, ChangeHash, Prop};
+
+/// A value for use with [`TransactionInner::populate_map`].
+/// Represents a tree of values that can be efficiently bulk-inserted.
+#[derive(Debug)]
+pub enum PopulateValue {
+    Scalar(crate::types::ScalarValue),
+    Map(Vec<(String, PopulateValue)>),
+    List(Vec<PopulateValue>),
+    Text(String),
+}
 
 #[derive(Debug, Clone)]
 pub(crate) struct TransactionInner {
@@ -457,6 +467,223 @@ impl TransactionInner {
             .splice(start_pos, &self.pending[start_pending..]);
 
         Ok(result_ids)
+    }
+
+    /// Populate a fresh map object from a tree of values in a single splice.
+    ///
+    /// This traverses the value tree breadth-first, building all ops
+    /// (for maps, lists, and text) into a single contiguous block, then
+    /// inserts them into the columnar storage in one splice call.
+    ///
+    /// This is dramatically faster than individual put/insert/splice_text
+    /// calls because it does only ONE splice across all 21 columns instead
+    /// of one splice per operation.
+    ///
+    /// IMPORTANT: Only valid for populating a fresh (empty) object in a
+    /// fresh document (no predecessors, no existing ops for any created object).
+    pub(crate) fn populate_map(
+        &mut self,
+        doc: &mut Automerge,
+        patch_log: &mut PatchLog,
+        obj: &ObjMeta,
+        entries: Vec<(String, PopulateValue)>,
+    ) -> Result<(), AutomergeError> {
+        use std::collections::VecDeque;
+
+        let range = doc.ops().scope_to_obj(&obj.id);
+        assert_eq!(
+            range.start, range.end,
+            "populate_map requires a fresh object"
+        );
+
+        let start_pending = self.pending.len();
+        let mut global_pos = range.end;
+
+        // BFS queue entries: (parent ObjMeta, children to process)
+        enum QueueItem {
+            Map(ObjMeta, Vec<(String, PopulateValue)>),
+            List(ObjMeta, Vec<PopulateValue>),
+            Text(ObjMeta, String),
+        }
+
+        let mut queue: VecDeque<QueueItem> = VecDeque::new();
+        queue.push_back(QueueItem::Map(*obj, entries));
+
+        let text_encoding = doc.text_encoding();
+
+        while let Some(item) = queue.pop_front() {
+            match item {
+                QueueItem::Map(parent_meta, entries) => {
+                    // Sort entries by key for map ordering
+                    let mut sorted: Vec<_> = entries.into_iter().collect();
+                    sorted.sort_by(|a, b| a.0.cmp(&b.0));
+
+                    for (key, value) in sorted {
+                        let id = self.next_id();
+                        let action = match &value {
+                            PopulateValue::Scalar(s) => OpType::Put(s.clone()),
+                            PopulateValue::Map(_) => OpType::Make(crate::ObjType::Map),
+                            PopulateValue::List(_) => OpType::Make(crate::ObjType::List),
+                            PopulateValue::Text(_) => OpType::Make(crate::ObjType::Text),
+                        };
+                        let resolved =
+                            crate::op_set2::op_set::ResolvedAction::VisibleUpdate(action);
+                        let op = TxOp::map(id, parent_meta, global_pos, resolved, key, vec![]);
+                        self.pending.push(op);
+                        global_pos += 1;
+
+                        // Queue child objects for later processing
+                        match value {
+                            PopulateValue::Map(children) => {
+                                let child_meta = ObjMeta {
+                                    id: ObjId(id),
+                                    typ: crate::ObjType::Map,
+                                };
+                                queue.push_back(QueueItem::Map(child_meta, children));
+                            }
+                            PopulateValue::List(items) => {
+                                let child_meta = ObjMeta {
+                                    id: ObjId(id),
+                                    typ: crate::ObjType::List,
+                                };
+                                queue.push_back(QueueItem::List(child_meta, items));
+                            }
+                            PopulateValue::Text(text) => {
+                                let child_meta = ObjMeta {
+                                    id: ObjId(id),
+                                    typ: crate::ObjType::Text,
+                                };
+                                queue.push_back(QueueItem::Text(child_meta, text));
+                            }
+                            PopulateValue::Scalar(_) => {} // Already handled
+                        }
+                    }
+                }
+                QueueItem::List(parent_meta, items) => {
+                    let mut elemid = ElemId::head();
+                    for (index, value) in items.into_iter().enumerate() {
+                        let id = self.next_id();
+                        match &value {
+                            PopulateValue::Scalar(s) => {
+                                let op = TxOp::insert_val(
+                                    id,
+                                    parent_meta,
+                                    global_pos,
+                                    s.clone(),
+                                    elemid,
+                                );
+                                self.pending.push(op);
+                            }
+                            PopulateValue::Map(_)
+                            | PopulateValue::List(_)
+                            | PopulateValue::Text(_) => {
+                                let obj_type = match &value {
+                                    PopulateValue::Map(_) => crate::ObjType::Map,
+                                    PopulateValue::List(_) => crate::ObjType::List,
+                                    PopulateValue::Text(_) => crate::ObjType::Text,
+                                    _ => unreachable!(),
+                                };
+                                let op = TxOp::insert_obj(
+                                    id,
+                                    parent_meta,
+                                    global_pos,
+                                    index,
+                                    obj_type,
+                                    elemid,
+                                );
+                                self.pending.push(op);
+
+                                match value {
+                                    PopulateValue::Map(children) => {
+                                        let child_meta = ObjMeta {
+                                            id: ObjId(id),
+                                            typ: crate::ObjType::Map,
+                                        };
+                                        queue.push_back(QueueItem::Map(child_meta, children));
+                                    }
+                                    PopulateValue::List(items) => {
+                                        let child_meta = ObjMeta {
+                                            id: ObjId(id),
+                                            typ: crate::ObjType::List,
+                                        };
+                                        queue.push_back(QueueItem::List(child_meta, items));
+                                    }
+                                    PopulateValue::Text(text) => {
+                                        let child_meta = ObjMeta {
+                                            id: ObjId(id),
+                                            typ: crate::ObjType::Text,
+                                        };
+                                        queue.push_back(QueueItem::Text(child_meta, text));
+                                    }
+                                    _ => unreachable!(),
+                                }
+                            }
+                        }
+                        elemid = ElemId(id);
+                        global_pos += 1;
+                    }
+                }
+                QueueItem::Text(parent_meta, text) => {
+                    let chars: Vec<crate::types::ScalarValue> = match text_encoding {
+                        TextEncoding::GraphemeCluster => {
+                            use unicode_segmentation::UnicodeSegmentation;
+                            text.graphemes(true)
+                                .map(crate::types::ScalarValue::from)
+                                .collect()
+                        }
+                        _ => text.chars().map(crate::types::ScalarValue::from).collect(),
+                    };
+                    let mut elemid = ElemId::head();
+                    for ch in chars {
+                        let id = self.next_id();
+                        let op = TxOp::insert_val(id, parent_meta, global_pos, ch, elemid);
+                        self.pending.push(op);
+                        elemid = ElemId(id);
+                        global_pos += 1;
+                    }
+                }
+            }
+        }
+
+        // Single splice for ALL ops
+        if start_pending < self.pending.len() {
+            doc.ops_mut()
+                .splice(range.end, &self.pending[start_pending..]);
+        }
+
+        // Generate patches (if patch log is active)
+        let encoding = doc.text_encoding();
+        if patch_log.is_active() {
+            for op in &self.pending[start_pending..] {
+                // For map puts
+                if !op.bld.insert && !op.is_delete() {
+                    patch_log.put(
+                        op.bld.obj,
+                        op.prop(),
+                        op.hydrate_value(encoding),
+                        op.id(),
+                        false,
+                        false,
+                    );
+                }
+                // For inserts (list and text)
+                if op.bld.insert {
+                    if op.obj_type == crate::ObjType::Text {
+                        patch_log.splice(op.bld.obj, op.index, op.as_str(), None);
+                    } else if op.obj_type == crate::ObjType::List {
+                        patch_log.insert(
+                            op.bld.obj,
+                            op.index,
+                            op.hydrate_value(encoding),
+                            op.id(),
+                            false,
+                        );
+                    }
+                }
+            }
+        }
+
+        Ok(())
     }
 
     fn local_list_op(
