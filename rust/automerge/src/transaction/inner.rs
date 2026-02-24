@@ -2,71 +2,10 @@ use std::borrow::Cow;
 use std::collections::HashSet;
 use std::num::NonZeroU64;
 use std::ops::Range;
-use std::sync::atomic::AtomicU64;
 use std::sync::Arc;
 
 use crate::change_graph::ChangeGraph;
 use unicode_segmentation::UnicodeSegmentation;
-
-pub static SPLICE_TIME: AtomicU64 = AtomicU64::new(0);
-pub static QUERY_TIME: AtomicU64 = AtomicU64::new(0);
-pub static SUCC_TIME: AtomicU64 = AtomicU64::new(0);
-pub static OP_COUNT: AtomicU64 = AtomicU64::new(0);
-pub static APPEND_COUNT: AtomicU64 = AtomicU64::new(0);
-pub static MAP_OP_COUNT: AtomicU64 = AtomicU64::new(0);
-pub static INSERT_OP_COUNT: AtomicU64 = AtomicU64::new(0);
-pub static TEXT_OP_COUNT: AtomicU64 = AtomicU64::new(0);
-
-pub fn reset_perf_counters() {
-    SPLICE_TIME.store(0, std::sync::atomic::Ordering::Relaxed);
-    QUERY_TIME.store(0, std::sync::atomic::Ordering::Relaxed);
-    SUCC_TIME.store(0, std::sync::atomic::Ordering::Relaxed);
-    OP_COUNT.store(0, std::sync::atomic::Ordering::Relaxed);
-    APPEND_COUNT.store(0, std::sync::atomic::Ordering::Relaxed);
-    MAP_OP_COUNT.store(0, std::sync::atomic::Ordering::Relaxed);
-    INSERT_OP_COUNT.store(0, std::sync::atomic::Ordering::Relaxed);
-    TEXT_OP_COUNT.store(0, std::sync::atomic::Ordering::Relaxed);
-}
-
-pub fn print_perf_counters() {
-    let splice = SPLICE_TIME.load(std::sync::atomic::Ordering::Relaxed);
-    let query = QUERY_TIME.load(std::sync::atomic::Ordering::Relaxed);
-    let succ = SUCC_TIME.load(std::sync::atomic::Ordering::Relaxed);
-    let ops = OP_COUNT.load(std::sync::atomic::Ordering::Relaxed);
-    let appends = APPEND_COUNT.load(std::sync::atomic::Ordering::Relaxed);
-    let map_ops = MAP_OP_COUNT.load(std::sync::atomic::Ordering::Relaxed);
-    let insert_ops = INSERT_OP_COUNT.load(std::sync::atomic::Ordering::Relaxed);
-    let text_ops = TEXT_OP_COUNT.load(std::sync::atomic::Ordering::Relaxed);
-    eprintln!("=== PERF COUNTERS ===");
-    eprintln!("  ops:        {}", ops);
-    eprintln!("  map_ops:    {}", map_ops);
-    eprintln!("  insert_ops: {}", insert_ops);
-    eprintln!("  text_ops:   {}", text_ops);
-    eprintln!(
-        "  appends:    {} ({:.1}%)",
-        appends,
-        appends as f64 / ops.max(1) as f64 * 100.0
-    );
-    eprintln!(
-        "  splice:     {:.3}ms ({:.1}us/op)",
-        splice as f64 / 1_000_000.0,
-        splice as f64 / 1_000.0 / ops.max(1) as f64
-    );
-    eprintln!(
-        "  query:      {:.3}ms ({:.1}us/op)",
-        query as f64 / 1_000_000.0,
-        query as f64 / 1_000.0 / ops.max(1) as f64
-    );
-    eprintln!(
-        "  succ:       {:.3}ms ({:.1}us/op)",
-        succ as f64 / 1_000_000.0,
-        succ as f64 / 1_000.0 / ops.max(1) as f64
-    );
-    eprintln!(
-        "  total:      {:.3}ms",
-        (splice + query + succ) as f64 / 1_000_000.0
-    );
-}
 
 use crate::exid::ExId;
 use crate::marks::{ExpandMark, Mark, MarkSet};
@@ -325,14 +264,8 @@ impl TransactionInner {
         succ: &[SuccInsert],
         range: Range<usize>,
     ) {
-        let is_append = op.pos == doc.ops().len();
-        let _t = std::time::Instant::now();
         let added = doc.ops_mut().splice(op.pos, &[&op]);
-        let _splice_dur = _t.elapsed();
-
-        let _t2 = std::time::Instant::now();
         doc.ops_mut().add_succ(succ);
-        let _succ_dur = _t2.elapsed();
 
         if self.scope.is_some() {
             doc.ops_mut().reset_top(range.start..(range.end + added));
@@ -341,20 +274,6 @@ impl TransactionInner {
         self.finalize_op(doc.text_encoding(), patch_log, &op, None);
 
         self.pending.push(op);
-
-        SPLICE_TIME.fetch_add(
-            _splice_dur.as_nanos() as u64,
-            std::sync::atomic::Ordering::Relaxed,
-        );
-        SUCC_TIME.fetch_add(
-            _succ_dur.as_nanos() as u64,
-            std::sync::atomic::Ordering::Relaxed,
-        );
-        OP_COUNT.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
-        MAP_OP_COUNT.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
-        if is_append {
-            APPEND_COUNT.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
-        }
     }
 
     pub(crate) fn insert<V: Into<ScalarValue>>(
@@ -402,32 +321,16 @@ impl TransactionInner {
     ) -> Result<OpId, AutomergeError> {
         let id = self.next_id();
 
-        let _t = std::time::Instant::now();
         let query = doc
             .ops()
             .query_insert_at(&obj.id, index, seq_type, self.scope.clone())?;
-        QUERY_TIME.fetch_add(
-            _t.elapsed().as_nanos() as u64,
-            std::sync::atomic::Ordering::Relaxed,
-        );
 
         let marks = query.marks;
         let pos = query.pos;
 
         let op = TxOp::insert(id, *obj, pos, index, action, query.elemid);
 
-        let is_append = op.pos == doc.ops().len();
-        let _t = std::time::Instant::now();
         doc.ops_mut().splice(op.pos, &[&op]);
-        SPLICE_TIME.fetch_add(
-            _t.elapsed().as_nanos() as u64,
-            std::sync::atomic::Ordering::Relaxed,
-        );
-        OP_COUNT.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
-        INSERT_OP_COUNT.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
-        if is_append {
-            APPEND_COUNT.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
-        }
 
         self.finalize_op(doc.text_encoding(), patch_log, &op, marks);
         self.pending.push(op);
@@ -459,14 +362,9 @@ impl TransactionInner {
     ) -> Result<Option<OpId>, AutomergeError> {
         let id = self.next_id();
 
-        let _t = std::time::Instant::now();
         let mut query = doc
             .ops()
             .seek_ops_by_map_key(&obj.id, &prop, self.scope.as_ref());
-        QUERY_TIME.fetch_add(
-            _t.elapsed().as_nanos() as u64,
-            std::sync::atomic::Ordering::Relaxed,
-        );
 
         let Some(resolved_action) = query.resolve_action(action) else {
             return Ok(None);
@@ -749,14 +647,9 @@ impl TransactionInner {
         // do the insert query for the first item and then
         // insert the remaining ops one after the other
         if !values.is_empty() {
-            let _t = std::time::Instant::now();
             let query = doc
                 .ops()
                 .query_insert_at(&obj.id, index, seq_type, self.scope.clone())?;
-            QUERY_TIME.fetch_add(
-                _t.elapsed().as_nanos() as u64,
-                std::sync::atomic::Ordering::Relaxed,
-            );
 
             index = query.index;
 
@@ -778,14 +671,7 @@ impl TransactionInner {
                 pos += 1;
             }
 
-            let _t = std::time::Instant::now();
             doc.ops_mut().splice(start_pos, &self.pending[start..]);
-            SPLICE_TIME.fetch_add(
-                _t.elapsed().as_nanos() as u64,
-                std::sync::atomic::Ordering::Relaxed,
-            );
-            OP_COUNT.fetch_add(values.len() as u64, std::sync::atomic::Ordering::Relaxed);
-            TEXT_OP_COUNT.fetch_add(values.len() as u64, std::sync::atomic::Ordering::Relaxed);
 
             if patch_log.is_active() {
                 match splice_type {
