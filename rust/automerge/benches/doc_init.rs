@@ -1,4 +1,5 @@
-use automerge::{transaction::Transactable, Automerge, ObjId, ObjType, ROOT};
+use automerge::transaction::{PopulateValue, Transactable};
+use automerge::{Automerge, ObjId, ObjType, ScalarValue, ROOT};
 use criterion::{criterion_group, criterion_main, Criterion};
 use serde_json::Value;
 use std::hint::black_box;
@@ -8,6 +9,8 @@ fn load_json() -> Value {
     let json_str = std::fs::read_to_string(path).expect("cannot read example.json");
     serde_json::from_str(&json_str).expect("cannot parse example.json")
 }
+
+// --- Individual-op approach (the slow path) ---
 
 fn insert_value_into_map(
     tx: &mut automerge::transaction::Transaction<'_>,
@@ -87,7 +90,7 @@ fn insert_value_into_list(
     }
 }
 
-fn populate_doc_from_json(json: &Value) -> Automerge {
+fn populate_doc_individual(json: &Value) -> Automerge {
     let mut doc = Automerge::new();
     doc.transact(|tx| {
         let Value::Object(map) = json else {
@@ -102,19 +105,69 @@ fn populate_doc_from_json(json: &Value) -> Automerge {
     doc
 }
 
+// --- populate_map approach (the fast path) ---
+
+fn json_to_populate_value(value: &Value) -> PopulateValue {
+    match value {
+        Value::String(s) => PopulateValue::Text(s.clone()),
+        Value::Number(n) => {
+            if let Some(i) = n.as_i64() {
+                PopulateValue::Scalar(ScalarValue::Int(i))
+            } else if let Some(f) = n.as_f64() {
+                PopulateValue::Scalar(ScalarValue::F64(f))
+            } else {
+                PopulateValue::Scalar(ScalarValue::Null)
+            }
+        }
+        Value::Bool(b) => PopulateValue::Scalar(ScalarValue::Boolean(*b)),
+        Value::Null => PopulateValue::Scalar(ScalarValue::Null),
+        Value::Object(map) => {
+            let entries: Vec<(String, PopulateValue)> = map
+                .iter()
+                .map(|(k, v)| (k.clone(), json_to_populate_value(v)))
+                .collect();
+            PopulateValue::Map(entries)
+        }
+        Value::Array(arr) => {
+            let items: Vec<PopulateValue> = arr.iter().map(json_to_populate_value).collect();
+            PopulateValue::List(items)
+        }
+    }
+}
+
+fn populate_doc_bulk(json: &Value) -> Automerge {
+    let mut doc = Automerge::new();
+    let Value::Object(map) = json else {
+        panic!("expected object at root");
+    };
+    let entries: Vec<(String, PopulateValue)> = map
+        .iter()
+        .map(|(k, v)| (k.clone(), json_to_populate_value(v)))
+        .collect();
+    let mut tx = doc.transaction();
+    tx.populate_map(&ROOT, entries).unwrap();
+    tx.commit();
+    doc
+}
+
 fn criterion_benchmark(c: &mut Criterion) {
     let json = load_json();
 
-    c.bench_function("doc_init_json_insert", |b| {
-        b.iter(|| populate_doc_from_json(black_box(&json)))
+    c.bench_function("doc_init_individual_ops", |b| {
+        b.iter(|| populate_doc_individual(black_box(&json)))
     });
 
-    let doc = populate_doc_from_json(&json);
+    c.bench_function("doc_init_populate_map", |b| {
+        b.iter(|| populate_doc_bulk(black_box(&json)))
+    });
 
-    c.bench_function("doc_init_json_save", |b| b.iter(|| black_box(doc.save())));
+    // Also benchmark save/load to ensure the document produced is valid
+    let doc = populate_doc_bulk(&json);
+
+    c.bench_function("doc_init_save", |b| b.iter(|| black_box(doc.save())));
 
     let bytes = doc.save();
-    c.bench_function("doc_init_json_load", |b| {
+    c.bench_function("doc_init_load", |b| {
         b.iter(|| Automerge::load(black_box(&bytes)).unwrap())
     });
 }
