@@ -127,6 +127,47 @@ impl Transaction<'_> {
             self.inner.as_ref().and_then(|i| i.get_scope().clone())
         }
     }
+
+    /// Batch put multiple key-value pairs into a map object in a single operation.
+    ///
+    /// Each entry is a `(key, value)` pair where value is an [`crate::OpType`].
+    /// Returns a vec of `(key, OpId)` pairs in the input order. For entries that
+    /// create objects (Make variants), the OpId can be converted to an ExId
+    /// via [`Self::id_to_exid`] to use for further operations on that object.
+    ///
+    /// This is significantly faster than individual `put`/`put_object` calls
+    /// because all entries are inserted into the columnar storage in a single
+    /// splice operation.
+    ///
+    /// # Example
+    /// ```ignore
+    /// use automerge::{ObjType, OpType, ScalarValue};
+    /// let entries = vec![
+    ///     ("name".to_string(), OpType::Put(ScalarValue::Str("Alice".into()))),
+    ///     ("age".to_string(), OpType::Put(ScalarValue::Int(30))),
+    ///     ("address".to_string(), OpType::Make(ObjType::Map)),
+    /// ];
+    /// let ids = tx.put_map_batch(&obj_id, entries)?;
+    /// ```
+    pub fn put_map_batch<O: AsRef<ExId>>(
+        &mut self,
+        obj: O,
+        entries: Vec<(String, crate::types::OpType)>,
+    ) -> Result<Vec<(String, ExId)>, AutomergeError> {
+        let keys: Vec<String> = entries.iter().map(|(k, _)| k.clone()).collect();
+        let obj_meta = self.doc.exid_to_obj(obj.as_ref())?;
+        if obj_meta.typ != ObjType::Map {
+            return Err(AutomergeError::InvalidOp(obj_meta.typ));
+        }
+        let ids = self.do_tx(|tx, doc, patch_log| {
+            tx.local_map_ops_batch(doc, patch_log, &obj_meta, entries)
+        })?;
+        Ok(keys
+            .into_iter()
+            .zip(ids.into_iter())
+            .map(|(key, id)| (key, self.doc.id_to_exid(id)))
+            .collect())
+    }
 }
 
 impl ReadDoc for Transaction<'_> {

@@ -77,3 +77,7 @@ harness = false
 [[bench]]
 name = "blocks"
 harness = false
+
+[[bench]]
+name = "doc_init"
+harness = false
