@@ -1,0 +1,2568 @@
+{
+  "documents": {
+    "019be27c-34e3-75b3-87c9-01fd3b0e5d13": {
+      "name": "Baez-Pollard (copy)",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1769031349527,
+      "deleted_at": 1769031459708
+    },
+    "019bc400-9f5b-7582-937e-9ea36f26b2c2": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1768519933792,
+      "deleted_at": 1770735877054
+    },
+    "019a92b3-1c51-7640-92fa-261594416918": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763397803092,
+      "deleted_at": 1763561856456
+    },
+    "019b328b-549f-7440-b02e-917ed97fd965": {
+      "name": "",
+      "type_name": "diagram",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1766079550627,
+      "deleted_at": null
+    },
+    "019a92c0-0fd1-7bc3-98e8-e8cf3bad8936": {
+      "name": "Scotland grid (re-do)",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763398651859,
+      "deleted_at": null
+    },
+    "019be2c0-0d6f-7783-9591-64ee2273b766": {
+      "name": "Baez-Pollard",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1769035795842,
+      "deleted_at": null
+    },
+    "019ae58f-a88c-7fe3-9c6e-d52f308f726b": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764787988624,
+      "deleted_at": 1764788067004
+    },
+    "019c008e-f997-7423-b1ea-7b362ab57c97": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1769535895961,
+      "deleted_at": 1770735889600
+    },
+    "019b8fc1-8e4e-7641-86f8-2c2d10b9838f": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767643385426,
+      "deleted_at": 1767730490001
+    },
+    "019a92b4-0f46-7fd3-a682-bf49287ddc5d": {
+      "name": "",
+      "type_name": "diagram",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763397865290,
+      "deleted_at": 1763475730094
+    },
+    "019a49b2-eba2-7823-9adc-60a37e3a250d": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762173053863,
+      "deleted_at": 1763396927355
+    },
+    "019a9c06-05c5-7040-99d1-85766e8a5d0c": {
+      "name": "TA 1.3 Schema",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763554231753,
+      "deleted_at": null
+    },
+    "019a97c6-9d03-79a3-9bf9-52ff9199237b": {
+      "name": "my amazing mode to share",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": {
+            "id": "EE7tdDkxYAQ7cUIh2WPlQo0vZAK2",
+            "username": "tim",
+            "display_name": "Tim Hosgood"
+          },
+          "level": "Read"
+        }
+      ],
+      "created_at": 1763482967302,
+      "deleted_at": 1763483450279
+    },
+    "019b2818-b8fa-7572-8c4d-c546830532f4": {
+      "name": "Visualization",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765904267517,
+      "deleted_at": 1765907267236
+    },
+    "019bc400-850c-78a1-855c-394d7050d3f6": {
+      "name": "MPox",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1768519927117,
+      "deleted_at": null
+    },
+    "019b943a-fd26-7b63-9004-7ddfe365a022": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767718452521,
+      "deleted_at": null
+    },
+    "019ae599-82e5-7f71-9dce-97347d5e0c44": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764788634345,
+      "deleted_at": 1765451500271
+    },
+    "019a9c7d-ca3c-77f2-9c9c-c98757e6c7b6": {
+      "name": "Visualization",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763562080832,
+      "deleted_at": null
+    },
+    "019ae5ad-f646-73b0-8840-0cebe49c15ce": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764789974602,
+      "deleted_at": 1765451506695
+    },
+    "019a4ebb-2e33-7350-899f-285c26e6390e": {
+      "name": "asdasdasdasdadad",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762257481298,
+      "deleted_at": 1763396921210
+    },
+    "019a50c2-6ed7-75d2-9a42-1aea7f6ef35c": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762291511003,
+      "deleted_at": 1762463712110
+    },
+    "019ae563-e7e2-72a0-9e05-7b919195566b": {
+      "name": "PE: ",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764785121253,
+      "deleted_at": null
+    },
+    "019a5935-34bd-7662-8454-9ee628d29278": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762433250496,
+      "deleted_at": 1763561543504
+    },
+    "019a3615-724f-7152-8139-e87162550db7": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1761843966546,
+      "deleted_at": 1763396941384
+    },
+    "019b2dad-44bf-7472-983e-2ce1f82bf000": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765997888706,
+      "deleted_at": 1765999396555
+    },
+    "019b280e-79dc-74b2-a88e-2386529e0956": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765903595999,
+      "deleted_at": 1765992617079
+    },
+    "019a3485-c27e-7301-920e-7c5c15f6e1b9": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1761817772675,
+      "deleted_at": 1763561864807
+    },
+    "019a849f-22c0-7b03-ab09-2979b6d02126": {
+      "name": "Scotland grid",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "fkLq2PgN0CYY5moJ1XSksaMi3Bw1",
+            "username": "epatters",
+            "display_name": "Evan Patterson"
+          },
+          "level": "Own"
+        },
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Write"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1763161612996,
+      "deleted_at": null
+    },
+    "019bc3fd-7400-72d1-b440-c0f9f203425e": {
+      "name": "MPox Combined",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1768519726087,
+      "deleted_at": null
+    },
+    "019b943e-3080-7350-84a5-6eae780661fb": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767718662276,
+      "deleted_at": null
+    },
+    "019b0d20-8015-7b40-8753-bfd7c757a19e": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765451792408,
+      "deleted_at": 1765992632968
+    },
+    "019ae541-605b-7a20-b2fa-8a922df24a8c": {
+      "name": "PE: The basic model",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764782858346,
+      "deleted_at": null
+    },
+    "019bc3fe-a2eb-7fc2-963d-e587d6e0fdcb": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1768519803643,
+      "deleted_at": 1770735910264
+    },
+    "019a4e86-bb28-7293-a8d9-be9907364c2f": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762254043949,
+      "deleted_at": 1762463715885
+    },
+    "019afece-e7e6-7ad0-9e7d-64e0ac3b6124": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765211564013,
+      "deleted_at": 1765383120427
+    },
+    "019a848d-457a-76c2-9194-7fe2b57b2a99": {
+      "name": "Scottish Highlands and NE",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "fkLq2PgN0CYY5moJ1XSksaMi3Bw1",
+            "username": "epatters",
+            "display_name": "Evan Patterson"
+          },
+          "level": "Own"
+        },
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Write"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1763160442270,
+      "deleted_at": null
+    },
+    "019b9437-02c4-70b3-af4c-032393305cf4": {
+      "name": "Signed Stock and Flow",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767718191815,
+      "deleted_at": null
+    },
+    "019ae593-565b-7a43-ad2a-7ef0584a0e3a": {
+      "name": "predator-prey",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764788229726,
+      "deleted_at": null
+    },
+    "019ae564-e46b-7372-8b4e-a172d5e2af47": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764785185905,
+      "deleted_at": 1765451534086
+    },
+    "019c5181-92d6-74e0-93b5-f777b59cf8a7": {
+      "name": "CatColab DB Schema (copy)",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1770893972234,
+      "deleted_at": null
+    },
+    "019b0953-d1ae-7f50-8d49-0b732958e7ef": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765388046769,
+      "deleted_at": 1765451523231
+    },
+    "019b9547-3a35-7fe1-a0b8-72be3b4ad5d3": {
+      "name": "SQL",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767736031800,
+      "deleted_at": 1768504241457
+    },
+    "01997b38-95bd-7e71-b5db-867dfa1f674a": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1758708929984,
+      "deleted_at": 1762463686720
+    },
+    "019ae546-34dd-7d83-8c20-3017565689bd": {
+      "name": "Visualization",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764783174884,
+      "deleted_at": null
+    },
+    "019b2d5d-8333-75e3-94a8-bf51e2854d24": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765992661815,
+      "deleted_at": null
+    },
+    "019c5190-d647-7a20-9e76-11761b62d411": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1770894972489,
+      "deleted_at": null
+    },
+    "01997b27-d82a-7593-8f59-377c05e2d7eb": {
+      "name": "example",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1758707832878,
+      "deleted_at": 1763561880526
+    },
+    "019b7f75-80b5-7f50-a34d-ed632720e802": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767369965752,
+      "deleted_at": 1767730485226
+    },
+    "019b943f-b878-7803-95eb-d8630c15b0b9": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767718762618,
+      "deleted_at": null
+    },
+    "019b8fc1-e8cb-7091-801a-63487ea463bd": {
+      "name": "",
+      "type_name": "diagram",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767643408590,
+      "deleted_at": 1767730494231
+    },
+    "019be806-3688-7511-94f7-ca99a3e50e89": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1769124279946,
+      "deleted_at": 1770735885168
+    },
+    "019b0d1f-2b77-74b3-9501-89173ffdc0bf": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": {
+            "id": "xyeXcGxn9zYJbAfaKJZosvWBVz62",
+            "username": "kaspar2",
+            "display_name": "kaspar2"
+          },
+          "level": "Read"
+        },
+        {
+          "user": {
+            "id": "EE7tdDkxYAQ7cUIh2WPlQo0vZAK2",
+            "username": "tim",
+            "display_name": "Tim Hosgood"
+          },
+          "level": "Read"
+        }
+      ],
+      "created_at": 1765451705212,
+      "deleted_at": 1765992636288
+    },
+    "019afdd7-3e07-76d1-bcc3-62e6fccc20b3": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765195333131,
+      "deleted_at": 1765195336763
+    },
+    "019a9757-343d-7fb0-93f4-f28fd37e7a90": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763475665984,
+      "deleted_at": 1763561710796
+    },
+    "019ae599-5a11-74c3-b8bb-707bdf773237": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764788623893,
+      "deleted_at": 1765451498486
+    },
+    "019b27bf-19fb-7960-b546-18addf789a79": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765898394111,
+      "deleted_at": 1765992620795
+    },
+    "019be805-f5d5-7ad0-95fa-bb310dc6a9b5": {
+      "name": "CatColab App State",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1769124263383,
+      "deleted_at": 1770735871627
+    },
+    "019a3615-894b-7720-9288-2c20e2630708": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1761843972432,
+      "deleted_at": 1763396931546
+    },
+    "019be2c0-f2e5-7f11-a032-957c9169a906": {
+      "name": "Analysis of Baez-Pollard",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1769035854566,
+      "deleted_at": null
+    },
+    "019c5181-aa8d-7da2-9ba5-d946e8a94b91": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1770893978257,
+      "deleted_at": null
+    },
+    "019a9757-87d1-7552-afd8-5128fa6a83eb": {
+      "name": "Vizualization",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763475687381,
+      "deleted_at": 1765195619316
+    },
+    "019b9438-9a9b-71c3-a98d-922af57fd326": {
+      "name": "Viz",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767718296222,
+      "deleted_at": null
+    },
+    "019b3213-ed53-7631-972c-c0e352c99f69": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1766071725398,
+      "deleted_at": null
+    },
+    "019c23db-50de-7550-987a-09297fe49940": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1770128101600,
+      "deleted_at": 1770735891988
+    },
+    "019b0ead-bc4a-70e3-a2e0-3694ee3cc16d": {
+      "name": "test3",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "xyeXcGxn9zYJbAfaKJZosvWBVz62",
+            "username": "kaspar2",
+            "display_name": "kaspar2"
+          },
+          "level": "Own"
+        },
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Read"
+        }
+      ],
+      "created_at": 1765477825613,
+      "deleted_at": null
+    },
+    "019a3489-8b48-7bf1-8e35-715c8d3fc790": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1761818020684,
+      "deleted_at": 1763396936636
+    },
+    "019ae56a-9ed9-7561-aa4c-7f89066acdd3": {
+      "name": "x",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764785561309,
+      "deleted_at": 1764789151724
+    },
+    "019afde8-0ea2-7663-a711-5ebf1dd2df55": {
+      "name": "Analysis 3",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765196435115,
+      "deleted_at": 1765451517093
+    },
+    "019b2805-8609-75e2-bb87-7cc1f47f09fc": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765903009291,
+      "deleted_at": 1765992618853
+    },
+    "019b9502-61ba-78a0-9016-83bfde651df5": {
+      "name": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "type_name": "diagram",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767731519934,
+      "deleted_at": 1770735907919
+    },
+    "019aa623-1e42-7572-8e5f-8a8c33fe46a2": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763723910725,
+      "deleted_at": 1764789179858
+    },
+    "019b9502-35e7-7b42-aea1-95be6d17af04": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767731508714,
+      "deleted_at": 1770735915235
+    },
+    "019c008d-edbf-7392-8d3b-28c18bea0a74": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1769535827392,
+      "deleted_at": 1770735887210
+    },
+    "019a6ec7-dce5-7cf3-b557-b20d67b2109e": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762795183337,
+      "deleted_at": 1763561860985
+    },
+    "019ae590-6de0-7923-b867-56c7c1340ef7": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764788039139,
+      "deleted_at": 1765451532163
+    },
+    "019be2c0-d8ad-7dd2-a5ba-8cb2311cbce5": {
+      "name": "Baez-Pollard",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1769035847873,
+      "deleted_at": null
+    },
+    "019c28f7-5880-73c2-b601-d53f113cec74": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1770213824641,
+      "deleted_at": 1770735894282
+    },
+    "019bc339-250b-7d92-a9d5-1fc8b3db10a0": {
+      "name": "MPox Surveillance",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1768506860835,
+      "deleted_at": null
+    },
+    "019a9c8c-6503-77f1-9e74-262e6b2cb095": {
+      "name": "Analysis of Scottish Highlands and NE",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763563037960,
+      "deleted_at": null
+    },
+    "019a3489-97ec-79d3-819c-bdd0ae30e991": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1761818023920,
+      "deleted_at": 1763396939249
+    },
+    "019b8fc1-bfc1-7ab0-abac-2ed0f8188ec2": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767643398085,
+      "deleted_at": 1767730492225
+    },
+    "019a9c0d-3c5a-7ad0-b446-0320b520ad94": {
+      "name": "TA 1.3 Ontology",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763554704477,
+      "deleted_at": null
+    },
+    "019b2dab-5801-72b0-a3bc-f76b778257cb": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765997762567,
+      "deleted_at": 1765999390631
+    },
+    "019bc3fa-8c83-7883-8e44-adf056d45cc9": {
+      "name": "MPox Vaccination",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1768519535751,
+      "deleted_at": null
+    },
+    "019b9502-8214-7081-9d12-d392d7b8911c": {
+      "name": "example",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767731528215,
+      "deleted_at": null
+    },
+    "019a49b1-e6f8-7e03-910b-fe3d860e9be9": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762172987133,
+      "deleted_at": 1763396929128
+    },
+    "019afde9-01db-7410-b388-0f154e684253": {
+      "name": "analysis",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765196497376,
+      "deleted_at": 1765481827952
+    },
+    "019b3214-057f-76a2-baf7-e45fa8184553": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1766071731587,
+      "deleted_at": null
+    },
+    "01997b38-459a-7b33-a9ec-2922b533ee3b": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1758708909470,
+      "deleted_at": 1763561867053
+    },
+    "019b13a8-6ac0-7252-89d7-bbeca6eca06a": {
+      "name": "Permissions",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765561363140,
+      "deleted_at": null
+    },
+    "019a5b10-af83-7363-8bf1-73316eb8abb4": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Write"
+        }
+      ],
+      "created_at": 1762464411527,
+      "deleted_at": 1762802788995
+    },
+    "019b2846-8be7-73f0-a863-41aa150b2dd9": {
+      "name": "Visualization",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1765907270635,
+      "deleted_at": null
+    },
+    "019a9c0a-5133-7a01-a0f1-9a7f1efb5e4e": {
+      "name": "Visualization",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763554513208,
+      "deleted_at": null
+    },
+    "019ae5ab-a3f5-7ba3-a199-8a72ebfb6690": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764789822457,
+      "deleted_at": 1765451504689
+    },
+    "019a49b2-9c30-79d2-9fc5-8d8741ee9655": {
+      "name": "",
+      "type_name": "diagram",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762173033525,
+      "deleted_at": 1763561863026
+    },
+    "019a348b-3cf2-7de1-ae53-015c48d15e69": {
+      "name": "asdsadsad",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1761818131702,
+      "deleted_at": 1763396934390
+    },
+    "019afdf7-41af-7360-850a-8c7221cb7023": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765197431219,
+      "deleted_at": 1765206807844
+    },
+    "019be6a9-8eee-7bb1-8535-18c38845806d": {
+      "name": "Long example",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1769101430578,
+      "deleted_at": null
+    },
+    "019a97c6-c3c1-76d3-af60-46e94745b79d": {
+      "name": "analysis to share",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": {
+            "id": "EE7tdDkxYAQ7cUIh2WPlQo0vZAK2",
+            "username": "tim",
+            "display_name": "Tim Hosgood"
+          },
+          "level": "Read"
+        }
+      ],
+      "created_at": 1763482977220,
+      "deleted_at": 1763483403279
+    },
+    "019bc3fd-3e56-72a3-8802-0d3b385beba8": {
+      "name": "Analysis",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1768519712347,
+      "deleted_at": null
+    },
+    "019b3206-c98c-7f40-a3df-027faf6ee5a6": {
+      "name": "Entity-Relationship Diagram",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1766070864272,
+      "deleted_at": null
+    },
+    "019c4270-7198-7fa1-9cda-382fba6cf6a2": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1770641191321,
+      "deleted_at": 1770735900202
+    },
+    "019b2cf0-8389-7da2-a8e2-a90372c2812f": {
+      "name": "CatColab DB Schema (operations)",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765985518543,
+      "deleted_at": null
+    },
+    "019a50b4-ebe8-79d2-a73e-45e5c2d9e99e": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762290625516,
+      "deleted_at": 1762463714084
+    },
+    "019b2704-199a-7e91-97bf-849e3ebb0203": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765886138790,
+      "deleted_at": 1765992625907
+    },
+    "019b93ef-9221-7820-bf5f-bed6d5bf28fa": {
+      "name": "x",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767713509925,
+      "deleted_at": 1767730496501
+    },
+    "019b2704-27ee-7342-a489-7971fe8fb92d": {
+      "name": "Next",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "xyeXcGxn9zYJbAfaKJZosvWBVz62",
+            "username": "kaspar2",
+            "display_name": "kaspar2"
+          },
+          "level": "Own"
+        },
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765886142450,
+      "deleted_at": null
+    },
+    "019b2d97-030e-7333-8156-13201ae30bdb": {
+      "name": "Baez-Pollard",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1765996430097,
+      "deleted_at": null
+    },
+    "01997b29-43d6-7b33-af4b-e097f2b41b92": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1758707925978,
+      "deleted_at": 1763561877384
+    },
+    "019a97c8-122f-7841-a2ae-7a1a12aee89a": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": {
+            "id": "EE7tdDkxYAQ7cUIh2WPlQo0vZAK2",
+            "username": "tim",
+            "display_name": "Tim Hosgood"
+          },
+          "level": "Read"
+        }
+      ],
+      "created_at": 1763483062835,
+      "deleted_at": 1763483440140
+    },
+    "019b2949-e6fc-7d41-926d-3e1bce3dd5f3": {
+      "name": "ER Diagram",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1765924267777,
+      "deleted_at": null
+    },
+    "019ae5bf-d108-7750-91a4-bf5516677af2": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764791144715,
+      "deleted_at": 1765451508599
+    },
+    "01987f49-3a81-7452-8c66-3af094d8f5c6": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "xyeXcGxn9zYJbAfaKJZosvWBVz62",
+            "username": "kaspar2",
+            "display_name": "kaspar2"
+          },
+          "level": "Own"
+        },
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Read"
+        }
+      ],
+      "created_at": 1754482162316,
+      "deleted_at": null
+    },
+    "019a4ebb-8bcc-7bb1-bbc4-dde7ba9955cb": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762257505234,
+      "deleted_at": 1763396925402
+    },
+    "019b139f-d46e-74d3-abfe-75285f2a6efd": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765560800370,
+      "deleted_at": 1765992627877
+    },
+    "019a92b3-4fef-7e90-9817-0d1830258aaa": {
+      "name": "New schema for CatColab backend",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763397816327,
+      "deleted_at": 1765195605528
+    },
+    "019b328b-b9ba-7c81-ad86-cb8354436460": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1766079576510,
+      "deleted_at": 1767730487641
+    },
+    "019b943a-7b17-7403-aa21-98eac2259a8a": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767718419230,
+      "deleted_at": null
+    },
+    "019be80c-13d0-72d0-943a-24a145a837ee": {
+      "name": "a",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1769124664274,
+      "deleted_at": 1769669660285
+    },
+    "019a9cb1-5e3d-7212-939f-650cb6b08fd6": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763565461056,
+      "deleted_at": 1764789169409
+    },
+    "019bc33b-9267-78d2-bef6-3429f0750b85": {
+      "name": "Analysis",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1768507019885,
+      "deleted_at": null
+    },
+    "019a50e1-e290-7ea2-975b-ce093b13ad26": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762293572244,
+      "deleted_at": 1762293583309
+    },
+    "019b33d2-aa42-7fd2-af30-a2f1d16523bf": {
+      "name": "xyz",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1766101002822,
+      "deleted_at": null
+    },
+    "01997b31-2082-7320-94cf-bb1399cd7b52": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1758708441221,
+      "deleted_at": 1763561875056
+    },
+    "019ae5aa-e6d2-7ca0-b6ae-18b7338f7572": {
+      "name": "multi-predator-prey",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764789774037,
+      "deleted_at": null
+    },
+    "019be6a9-d913-7160-938b-32de40d2ddd0": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1769101449492,
+      "deleted_at": 1770735882963
+    },
+    "019b93f5-934e-7e40-9eea-9c60a72acd8b": {
+      "name": "CatColab Permissions",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767713903441,
+      "deleted_at": null
+    },
+    "019a9cbe-8482-7dd3-b1b8-6f2ecf7e64cd": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763566322821,
+      "deleted_at": 1764789177294
+    },
+    "019a9c3a-4d4d-78e1-82d1-19c2f0929385": {
+      "name": "Visualization",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763557657938,
+      "deleted_at": null
+    },
+    "019b2949-d228-7ed0-bee6-54a12112bb7f": {
+      "name": "CatColab DB Schema (copy)y",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1765924262564,
+      "deleted_at": null
+    },
+    "019a3654-1522-7433-902f-a7db33a80aed": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1761848071462,
+      "deleted_at": 1762463717732
+    },
+    "019a5b10-a1d5-74c3-8e0d-e30dc9c71014": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762464408024,
+      "deleted_at": 1763561547067
+    },
+    "019c28f7-eee5-7781-97d8-0e1018fb551a": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1770213863143,
+      "deleted_at": 1770735896614
+    },
+    "019b280f-d48c-7f70-9c58-44055af078ce": {
+      "name": "CatColab DB Schema",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1765903684752,
+      "deleted_at": null
+    },
+    "019c5180-cde4-7991-8aea-42f0a02e4fba": {
+      "name": "SQL",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1770893921765,
+      "deleted_at": null
+    },
+    "019afde8-1ec2-7450-b67b-d127bfd348d4": {
+      "name": "Analysis 2",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765196439239,
+      "deleted_at": 1765451519358
+    },
+    "019b9440-4dde-7f21-b0b8-bc2791119c8e": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767718800866,
+      "deleted_at": 1767730631018
+    },
+    "019a48e5-5d95-7d43-85f6-d79884bc2a42": {
+      "name": "",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762159582629,
+      "deleted_at": 1763561560467
+    },
+    "019a50b7-68b4-70a0-80fc-b2506a923b03": {
+      "name": "hello-this-iong-name-what a shame",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1762290788535,
+      "deleted_at": 1763396923359
+    },
+    "019b2d9a-4b1f-79a1-b7f0-54963d8c957c": {
+      "name": "Analysis of Baez-Pollard",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        },
+        {
+          "user": null,
+          "level": "Read"
+        }
+      ],
+      "created_at": 1765996645155,
+      "deleted_at": 1770641188490
+    },
+    "019ae5aa-20b8-7e93-8981-3e303a782e6c": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764789723325,
+      "deleted_at": 1765451502571
+    },
+    "019afde7-a18e-7a53-941f-ac35b4f45886": {
+      "name": "Diagram",
+      "type_name": "diagram",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765196407186,
+      "deleted_at": 1765451512573
+    },
+    "019a97f9-0780-7463-818c-126de5c01c04": {
+      "name": "CatColab Schema",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1763486271384,
+      "deleted_at": null
+    },
+    "019ae590-a511-7b11-b43e-7bf6e39e0c49": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764788053273,
+      "deleted_at": 1764788062287
+    },
+    "019afde7-7e59-7ef2-ac94-1d97941ff958": {
+      "name": "Example",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765196398173,
+      "deleted_at": 1765451510491
+    },
+    "019c23da-f8a7-75a2-b6c6-f7f5f61cf707": {
+      "name": "L. lactis glycolysis",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1770128079058,
+      "deleted_at": null
+    },
+    "019b94f3-09eb-76b1-b794-698d63493dc1": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1767730514414,
+      "deleted_at": null
+    },
+    "019ae590-79cf-7ef1-89ec-9e65d0494bc0": {
+      "name": "",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1764788042206,
+      "deleted_at": 1765451530229
+    },
+    "019b2cf1-56ea-7832-86f0-6a221c3236fb": {
+      "name": "Visualization",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765985572589,
+      "deleted_at": null
+    },
+    "019afde7-b81f-7b61-9bb7-08253b345858": {
+      "name": "Analysis 1",
+      "type_name": "analysis",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765196412963,
+      "deleted_at": 1765451514651
+    },
+    "019b22f8-49e5-7eb3-a389-01263c3d73ea": {
+      "name": "test3 (copy)",
+      "type_name": "model",
+      "permissions": [
+        {
+          "user": {
+            "id": "Wdx2cYhvClcJWnpUKwMEah8UUpv2",
+            "username": "kaspar",
+            "display_name": "kaspar"
+          },
+          "level": "Own"
+        }
+      ],
+      "created_at": 1765818255848,
+      "deleted_at": null
+    }
+  }
+}
